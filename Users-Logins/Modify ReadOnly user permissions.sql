@@ -1,0 +1,26 @@
+USE [DATABASE1_NAME]
+GO
+CREATE USER [ReadOnlyUser] FOR LOGIN [ReadOnlyUser]
+GO
+USE [DATABASE1_NAME]
+GO
+ALTER ROLE [db_datareader] ADD MEMBER [ReadOnlyUser]
+GO
+
+USE [DATABASE2_NAME]
+GO
+CREATE USER [ReadOnlyUser] FOR LOGIN [ReadOnlyUser]
+GO
+USE [DATABASE2_NAME]
+GO
+ALTER ROLE [db_datareader] ADD MEMBER [ReadOnlyUser]
+GO
+  
+USE [DATABASE3_NAME]
+GO
+CREATE USER [ReadOnlyUser] FOR LOGIN [ReadOnlyUser]
+GO
+USE [DATABASE3_NAME]
+GO
+ALTER ROLE [db_datareader] ADD MEMBER [ReadOnlyUser]
+GO
